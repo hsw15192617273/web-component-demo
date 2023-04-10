@@ -1,0 +1,22 @@
+{
+  "name": "components-hub",
+  "version": "0.0.1",
+  "description": "组件仓库",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "http://git.chaxb.xyz:88/learn/components-hub.git"
+  },
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "lit": "^2.7.2",
+    "vite": "^4.2.1"
+  },
+  "devDependencies": {
+    "typescript": "^5.0.4"
+  }
+}
