@@ -7,8 +7,53 @@
   <title>Web Components</title>
 </head>
 <body>
-  <script type="module" src="main.ts"></script>
-  原生对话框: <input type="text" name="chat" id="chat-1">
-  Lit对话框: <input-chat></input-chat>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@shoelace-style/shoelace@2.3.0/dist/themes/light.css" />
+  <script type="module" src="https://cdn.jsdelivr.net/npm/@shoelace-style/shoelace@2.3.0/dist/shoelace-autoloader.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@tinymce/tinymce-webcomponent@2/dist/tinymce-webcomponent.min.js"></script>
+  <script type="module" src="wc-sample.js"></script>
+  <script type="module" src="lit-sample.ts"></script>
+
+  <sl-details summary="tinymce">
+    <tinymce-editor></tinymce-editor>
+  </sl-details>
+
+  <sl-details summary="web component sample">
+    <div>原生组件</div>
+    <red-div>Web Component组件</red-div>
+  </sl-details>
+
+  <sl-details summary="web component sample(template+slot)">
+    <template id="my-meeting">
+      <p>主持人:<slot name="host"></slot></p>
+      <p>会议记录:<slot name="minutes"></slot></p>
+      <p>时间官:<slot name="timekeeper"></slot></p>
+    </template>
+
+    <group-div>
+      <span slot="host">jared</span>
+      <span slot="minutes">zev</span>
+      <span slot="timekeeper">ruka</span>
+    </group-div>
+  </sl-details>
+
+  <sl-details summary="web component 复杂sample">
+    <click-div count="10"></click-div>
+  </sl-details>
+
+  <sl-details summary="Lit sample">
+    <div>原生组件</div>
+    <blue-div>Lit组件</blue-div>
+  </sl-details>
+
+  <sl-details summary="Lit 复杂sample">
+    <lit-click-div count="10"></lit-click-div>
+  </sl-details>
+
+  <style>
+    div {
+      color: goldenrod;
+      background-color: aquamarine;
+    }
+  </style>
 </body>
 </html>
